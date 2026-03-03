@@ -1,0 +1,15 @@
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
+from dotenv import load_dotenv
+
+load_dotenv()
+
+llm = HuggingFaceEndpoint(
+    repo_id="TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
+    task="text-generation"
+)
+
+
+model = ChatHuggingFace(llm=llm, temperature=0.7)
+
+result = model.invoke("Capital of Pakistan ")
+print(result.content)
