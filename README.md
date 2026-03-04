@@ -24,6 +24,15 @@ Is repository mein LangChain ke basics aur fundamental components ko implement k
 - 384-dimensional embeddings
 - Text ko vector representation mein convert karna
 
+### 4. Prompts & Prompt Templates
+- **Location:** `langchain_prompt/`
+- `PromptTemplate` — dynamic variable-based prompts
+- `ChatPromptTemplate` with `SystemMessagePromptTemplate` & `HumanMessagePromptTemplate`
+- `MessagesPlaceholder` — chat history injection into prompts
+- `SystemMessage`, `HumanMessage`, `AIMessage` — direct message-type usage
+- Streamlit UI integration for interactive research paper summarizer (`prompt2.py`, `prompt_ui.py`)
+- Multi-parameter prompts: paper selection, explanation style & length
+
 ## Environment Setup
 
 ### Required Packages
@@ -50,6 +59,11 @@ langchain/
 │   └── chatmodel5.py
 ├── 3.Embeddings/
 │   └── embedding2.py
+├── langchain_prompt/
+│   ├── message.py
+│   ├── chatplaceholder.py
+│   ├── prompt_ui.py
+│   └── prompt2.py
 ├── requirements.txt
 ├── .env
 └── README.md
@@ -57,7 +71,7 @@ langchain/
 
 ## Next Steps 🚀
 Aage aur LangChain components add kiye jayenge:
-- Prompts & Prompt Templates
+- ~~Prompts & Prompt Templates~~ ✅
 - Chains
 - Memory
 - Agents
@@ -75,4 +89,4 @@ Aage aur LangChain components add kiye jayenge:
 ---
 
 **Author:** Zahid Iqbal  
-**Last Updated:** March 3, 2026
+**Last Updated:** March 4, 2026
