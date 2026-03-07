@@ -40,6 +40,13 @@ Is repository mein LangChain ke basics aur fundamental components ko implement k
 - `structuretypedict.py` — LangChain `with_structured_output()` using `TypedDict` with Google Gemini (`gemini-2.5-flash`) — movie review summary & sentiment extraction
 - `json_schema.json` — Raw JSON Schema definition for structured data validation
 
+### 6. Chains
+- **Location:** `chains/`
+- `simplechain.py` — Basic `prompt | model | parser` chain with ASCII graph visualization
+- `complexchain.py` — Multi-step sequential chain: report generation → auto-summarization
+- `parralelchain.py` — `RunnableParallel` running two LLM calls concurrently (notes + questions) then merging with a third chain
+- `conditionalchain.py` — `RunnableBranch` for sentiment-based conditional routing using `PydanticOutputParser`
+
 ## Environment Setup
 
 ### Required Packages
@@ -79,6 +86,11 @@ langchain/
 │   ├── type_dict.py
 │   ├── structuretypedict.py
 │   └── json_schema.json
+├── chains/
+│   ├── simplechain.py
+│   ├── complexchain.py
+│   ├── parralelchain.py
+│   └── conditionalchain.py
 ├── requirements.txt
 ├── .env
 └── README.md
@@ -88,7 +100,8 @@ langchain/
 Aage aur LangChain components add kiye jayenge:
 - ~~Prompts & Prompt Templates~~ ✅
 - ~~Structured Output~~ ✅
-- Chains
+- ~~Chains~~ ✅
+- Memory
 - Memory
 - Agents
 - Vector Stores
@@ -105,4 +118,4 @@ Aage aur LangChain components add kiye jayenge:
 ---
 
 **Author:** Zahid Iqbal  
-**Last Updated:** March 6, 2026
+**Last Updated:** March 7, 2026
